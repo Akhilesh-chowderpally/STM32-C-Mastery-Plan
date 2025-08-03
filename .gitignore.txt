@@ -1,0 +1,8 @@
+# Build artifacts
+Debug/
+Release/
+
+# IDE settings
+.settings/
+.project
+.cproject

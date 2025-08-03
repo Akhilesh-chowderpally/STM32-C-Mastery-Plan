@@ -1,0 +1,17 @@
+20:41:14 **** Incremental Build of configuration Debug for project My_First_Blinky ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "My_First_Blinky.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\chowd\OneDrive\Desktop\STM32-C-Mastery-Plan\My_First_Blinky\STM32F401CCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="My_First_Blinky.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: My_First_Blinky.elf
+ 
+arm-none-eabi-size  My_First_Blinky.elf 
+arm-none-eabi-objdump -h -S My_First_Blinky.elf  > "My_First_Blinky.list"
+   text	   data	    bss	    dec	    hex	filename
+   5872	     12	   1572	   7456	   1d20	My_First_Blinky.elf
+Finished building: default.size.stdout
+ 
+Finished building: My_First_Blinky.list
+ 
+
+20:41:15 Build Finished. 0 errors, 0 warnings. (took 747ms)
+
