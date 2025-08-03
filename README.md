@@ -1,36 +1,53 @@
-STM32 & C Mastery Plan
-This repository documents my 8-week journey to master embedded systems programming using C and STM32 microcontrollers. It serves as my professional portfolio for the projects built during this plan.
+# STM32 & C Mastery Plan
 
-Week 1 Projects
-1. Blinky (HAL & Bare-Metal)
-This is the "Hello, World!" of embedded systems, designed to set up the toolchain and demonstrate basic hardware control.
+This repository documents my **8-week journey** to master **embedded systems programming using C and STM32 microcontrollers**. It also serves as a **professional portfolio** of the projects built during this plan.
 
-Key Features:
+---
 
-Configures the onboard LED pin (PC13) using both the STM32 HAL and direct bare-metal register manipulation.
+##  Week 1 Projects
 
-Implements a 500ms blink delay using HAL_Delay().
+### 1️ Blinky (HAL & Bare-Metal)
 
-Demonstrates understanding of memory-mapped I/O by finding and writing directly to the GPIOC ODR register at address 0x40020814.
+This is the "**Hello, World!**" of embedded systems, designed to **set up the toolchain** and demonstrate basic hardware control.
 
-2. 8-Bit Bare-Metal LED Counter
-This project demonstrates low-level control over an entire GPIO port by creating a binary counter with 8 LEDs.
+####  Key Features
 
-Key Features:
+- **LED Pin Configuration:**
+  - Configures the onboard LED pin (**PC13**) using both **STM32 HAL** and **bare-metal register manipulation**.
 
-Bare-Metal Configuration: Configures pins PA0 through PA7 as outputs by writing a calculated value (0x00005555) directly to the GPIOA_MODER register.
+- **Blinking Logic:**
+  - Implements a **500ms blink delay** using `HAL_Delay()`.
 
-Bare-Metal Control: Creates a binary counting effect from 0 to 255 by writing directly to the GPIOA_ODR register within a for loop.
+- **Memory-Mapped I/O:**
+  - Demonstrates direct control of hardware by writing to the **GPIOC Output Data Register** (`GPIOC_ODR`) at address `0x40020814`.
 
-This project proves a deep understanding of GPIO port architecture and bit manipulation at the register level.
+---
 
-Technologies Used in Week 1
-MCU: STM32F401CCU6 (Black Pill)
+### 2️ 8-Bit Bare-Metal LED Counter
 
-Language: C
+This project demonstrates **low-level control** over an entire GPIO port by creating a **binary counter** with 8 LEDs.
 
-IDE: STM32CubeIDE
+####  Key Features
 
-Toolchain: GCC for ARM
+- **Bare-Metal Configuration:**
+  - Configures pins **PA0 through PA7** as outputs by writing the value `0x00005555` to the `GPIOA_MODER` register.
 
-Debugger: ST-Link V2
+- **Bare-Metal Control:**
+  - Creates a binary counting effect from `0 to 255` by writing directly to the `GPIOA_ODR` register inside a `for` loop.
+
+- **Learning Outcome:**
+  - Demonstrates **mastery of GPIO architecture** and **bitwise operations** at the register level.
+
+---
+
+##  Technologies Used in Week 1
+
+- **MCU:** STM32F401CCU6 (Black Pill)  
+- **Language:** C  
+- **IDE:** STM32CubeIDE  
+- **Toolchain:** GCC for ARM  
+- **Debugger:** ST-Link V2  
+
+---
+
+> This repository will continue to grow with more advanced embedded projects in the upcoming weeks.
